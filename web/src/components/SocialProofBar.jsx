@@ -14,7 +14,7 @@ const bar = {
 };
 
 const starStyle = {
-  color: "var(--gold, #d97706)",
+  color: "var(--da-primary)",
   letterSpacing: "1px",
 };
 

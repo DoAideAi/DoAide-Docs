@@ -14,7 +14,7 @@ const s = {
   th: { textAlign: "left", padding: "10px 8px", borderBottom: "2px solid var(--border)", color: "var(--text-secondary)", fontWeight: 600, background: "var(--surface)" },
   td: { padding: "10px 8px", borderBottom: "1px solid var(--border)" },
   link: { color: "var(--gold)", fontWeight: 500, textDecoration: "none" },
-  callout: { padding: 20, background: "var(--gold-bg)", border: "1px solid rgba(240,180,41,0.2)", borderRadius: "var(--radius-lg)", marginBottom: 24, fontSize: 14, lineHeight: 1.7, color: "var(--text-secondary)" },
+  callout: { padding: 20, background: "var(--gold-bg)", border: "1px solid rgba(13,148,136,0.2)", borderRadius: "var(--radius-lg)", marginBottom: 24, fontSize: 14, lineHeight: 1.7, color: "var(--text-secondary)" },
   calloutTitle: { fontWeight: 600, color: "var(--gold)", marginBottom: 8 },
   ul: { paddingLeft: 20, marginBottom: 16, fontSize: 15, lineHeight: 1.8, color: "var(--text-secondary)" },
   ol: { paddingLeft: 20, marginBottom: 16, fontSize: 15, lineHeight: 1.8, color: "var(--text-secondary)" },

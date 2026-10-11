@@ -25,8 +25,8 @@ const grid = {
 const card = {
   display: "block",
   padding: "0.875rem 1rem",
-  background: "rgba(217, 119, 6, 0.04)",
-  border: "1px solid rgba(217, 119, 6, 0.12)",
+  background: "rgba(13, 148, 136, 0.04)",
+  border: "1px solid rgba(13, 148, 136, 0.12)",
   borderRadius: "10px",
   textDecoration: "none",
   color: "var(--heading, #1f2937)",
@@ -68,8 +68,8 @@ export default function TrendingTools() {
             target="_blank"
             rel="noopener noreferrer"
             style={card}
-            onMouseEnter={e => { e.currentTarget.style.borderColor = "rgba(217,119,6,0.4)"; e.currentTarget.style.transform = "translateY(-1px)"; }}
-            onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(217,119,6,0.12)"; e.currentTarget.style.transform = "none"; }}
+            onMouseEnter={e => { e.currentTarget.style.borderColor = "rgba(13,148,136,0.4)"; e.currentTarget.style.transform = "translateY(-1px)"; }}
+            onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(13,148,136,0.12)"; e.currentTarget.style.transform = "none"; }}
           >
             <div style={cardName}>
               <span style={{ marginRight: "0.4rem" }}>{tool.icon}</span>

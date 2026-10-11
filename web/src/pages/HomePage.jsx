@@ -103,8 +103,8 @@ export default function HomePage() {
 
         {/* Quick Start */}
         <section className="quick-start-section" style={{ marginBottom: "2rem" }}>
-          <h2 style={{ fontFamily: "var(--font-display)", fontSize: "1.5rem", fontWeight: 400, textAlign: "center", marginBottom: "1.5rem", color: "var(--text)" }}>
-            Generate Your First Document in <span style={{ color: "var(--gold)" }}>30 Seconds</span>
+          <h2 style={{ fontFamily: "var(--font)", fontSize: "1.5rem", fontWeight: 700, textAlign: "center", marginBottom: "1.5rem", color: "var(--text)", letterSpacing: "-0.01em" }}>
+            Generate Your First Document in <span style={{ color: "var(--da-primary)" }}>30 Seconds</span>
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem" }}>
             {[
@@ -113,7 +113,7 @@ export default function HomePage() {
               { step: "3", title: "Download PDF Instantly", desc: "Click download and get a professional PDF. No signup, no watermarks." },
             ].map((s) => (
               <div key={s.step} style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: "var(--radius-lg)", padding: "1.25rem", textAlign: "center" }}>
-                <div style={{ width: "36px", height: "36px", borderRadius: "50%", background: "var(--gold)", color: "var(--text-on-gold)", display: "inline-flex", alignItems: "center", justifyContent: "center", fontWeight: 700, fontSize: "1rem", marginBottom: "0.75rem" }}>{s.step}</div>
+                <div style={{ width: "36px", height: "36px", borderRadius: "50%", background: "var(--da-primary)", color: "var(--da-text-on-primary)", display: "inline-flex", alignItems: "center", justifyContent: "center", fontWeight: 700, fontSize: "1rem", marginBottom: "0.75rem" }}>{s.step}</div>
                 <h3 style={{ fontSize: "0.95rem", fontWeight: 600, color: "var(--text)", marginBottom: "0.35rem" }}>{s.title}</h3>
                 <p style={{ fontSize: "0.8rem", color: "var(--text-secondary)", lineHeight: 1.5 }}>{s.desc}</p>
               </div>
@@ -146,7 +146,7 @@ export default function HomePage() {
               <p>{doc.desc}</p>
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: "0.5rem" }}>
                 <span className="doc-card-tag">{doc.category}</span>
-                <span style={{ fontSize: "0.75rem", fontWeight: 700, color: "var(--gold, #d97706)" }}>Generate Now →</span>
+                <span style={{ fontSize: "0.75rem", fontWeight: 700, color: "var(--da-primary)" }}>Generate Now →</span>
               </div>
             </Link>
           ))}
@@ -183,7 +183,7 @@ export default function HomePage() {
             </a>
           </div>
           <p style={{ marginTop: "1rem", fontSize: "0.875rem" }}>
-            <a href="https://doaide.com" target="_blank" rel="noopener noreferrer" style={{ color: "var(--gold, #d97706)", textDecoration: "none" }}>
+            <a href="https://doaide.com" target="_blank" rel="noopener noreferrer" style={{ color: "var(--da-primary)", textDecoration: "none" }}>
               Explore all DoAide tools &rarr;
             </a>
           </p>

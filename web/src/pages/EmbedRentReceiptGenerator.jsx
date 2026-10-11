@@ -12,7 +12,7 @@ const s = {
   page: {
     display: "flex", flexDirection: "column", minHeight: "100vh",
     background: "#0A0A0B", color: "#E5E7EB",
-    fontFamily: "'Schibsted Grotesk', system-ui, sans-serif", fontSize: 14, boxSizing: "border-box",
+    fontFamily: "'Inter', system-ui, sans-serif", fontSize: 14, boxSizing: "border-box",
   },
   header: {
     padding: "10px 16px", borderBottom: "1px solid #2A2A2D",
@@ -33,7 +33,7 @@ const s = {
   },
   grid: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 },
   btn: {
-    width: "100%", padding: "10px", background: "#F0B429", color: "#0A0A0B",
+    width: "100%", padding: "10px", background: "#0D9488", color: "#FFFFFF",
     border: "none", borderRadius: 6, fontSize: 14, fontWeight: 600, cursor: "pointer",
     marginTop: 4,
   },
@@ -137,7 +137,7 @@ export default function EmbedRentReceiptGenerator() {
         )}
       </div>
       <a style={s.powered} href="https://docs.doaide.com?ref=widget" target="_blank" rel="noopener noreferrer">
-        Powered by <strong style={{ color: "#F0B429" }}>DoAide Docs</strong>
+        Powered by <strong style={{ color: "#0D9488" }}>DoAide Docs</strong>
       </a>
     </div>
   );

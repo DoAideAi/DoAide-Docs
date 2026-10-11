@@ -1,33 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 :root {
-  --bg: #0A0A0B;
-  --bg-alt: #111113;
-  --surface: #1A1A1D;
-  --surface-hover: #222225;
-  --border: #2A2A2D;
-  --border-light: #333336;
-  --gold: #F0B429;
-  --gold-hover: #D4A017;
-  --gold-light: #F7CC5F;
-  --gold-bg: rgba(240,180,41,0.1);
-  --gold-bg-strong: rgba(240,180,41,0.15);
-  --text: #E5E7EB;
-  --text-secondary: #9CA3AF;
-  --text-muted: #6B7280;
-  --text-on-gold: #0A0A0B;
+  --da-primary: #0D9488;
+  --da-primary-hover: #0F766E;
+  --da-primary-light: #2DD4BF;
+  --da-primary-bg: rgba(13,148,136,0.1);
+  --da-primary-bg-strong: rgba(13,148,136,0.15);
+  --da-bg: #FAFAFA;
+  --da-bg-alt: #F3F4F6;
+  --da-surface: #FFFFFF;
+  --da-surface-hover: #F9FAFB;
+  --da-text: #111827;
+  --da-text-secondary: #6B7280;
+  --da-text-muted: #9CA3AF;
+  --da-text-on-primary: #FFFFFF;
+  --da-border: #E5E7EB;
+  --da-border-light: #F3F4F6;
+  --bg: var(--da-bg);
+  --bg-alt: var(--da-bg-alt);
+  --surface: var(--da-surface);
+  --surface-hover: var(--da-surface-hover);
+  --border: var(--da-border);
+  --border-light: var(--da-border-light);
+  --gold: var(--da-primary);
+  --gold-hover: var(--da-primary-hover);
+  --gold-light: var(--da-primary-light);
+  --gold-bg: var(--da-primary-bg);
+  --gold-bg-strong: var(--da-primary-bg-strong);
+  --text: var(--da-text);
+  --text-secondary: var(--da-text-secondary);
+  --text-muted: var(--da-text-muted);
+  --text-on-gold: var(--da-text-on-primary);
   --success: #34D399;
   --error: #F87171;
   --warning: #FBBF24;
   --info: #60A5FA;
-  --font: 'Schibsted Grotesk', system-ui, -apple-system, sans-serif;
-  --font-display: 'Instrument Serif', Georgia, serif;
+  --font: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Inter', system-ui, -apple-system, sans-serif;
   --radius-sm: 6px;
   --radius-md: 8px;
   --radius-lg: 12px;
   --radius-xl: 16px;
-  --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 4px 12px rgba(0,0,0,0.2);
-  --shadow-gold: 0 0 20px rgba(240,180,41,0.15);
+  --shadow: 0 1px 2px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-gold: 0 0 20px rgba(13,148,136,0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --da-bg: #0A0A0B;
+    --da-bg-alt: #111113;
+    --da-surface: #1A1A1D;
+    --da-surface-hover: #222225;
+    --da-text: #E5E7EB;
+    --da-text-secondary: #9CA3AF;
+    --da-text-muted: #6B7280;
+    --da-border: #2A2A2D;
+    --da-border-light: #333336;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 4px 12px rgba(0,0,0,0.2);
+    --shadow-gold: 0 0 20px rgba(13,148,136,0.15);
+  }
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -66,12 +97,21 @@ a:hover { color: var(--gold-light); }
   flex-shrink: 0;
 }
 .brand-name {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 400;
-  color: var(--text);
+  font-family: var(--font);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--da-primary);
+  letter-spacing: -0.01em;
 }
-.brand-accent { color: var(--gold); }
+.brand-separator {
+  color: var(--da-text-muted);
+  font-weight: 300;
+  margin: 0 0.15rem;
+}
+.brand-product {
+  color: var(--da-text);
+  font-weight: 600;
+}
 
 .header-nav {
   display: flex;
@@ -105,11 +145,12 @@ a:hover { color: var(--gold-light); }
   padding: 3rem 1rem 2rem;
 }
 .hero h1 {
-  font-family: var(--font-display);
+  font-family: var(--font);
   font-size: 2.8rem;
-  font-weight: 400;
+  font-weight: 800;
   margin-bottom: 0.75rem;
   color: var(--text);
+  letter-spacing: -0.02em;
 }
 .hero h1 span { color: var(--gold); }
 .hero p {
@@ -123,14 +164,14 @@ a:hover { color: var(--gold-light); }
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  background: var(--gold-bg);
-  color: var(--gold);
+  background: var(--da-primary-bg);
+  color: var(--da-primary);
   padding: 0.35rem 0.85rem;
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
-  border: 1px solid rgba(240,180,41,0.2);
+  border: 1px solid rgba(13,148,136,0.2);
 }
 
 .category-filters {
@@ -210,10 +251,11 @@ a:hover { color: var(--gold-light); }
   margin-bottom: 2rem;
 }
 .gen-header h1 {
-  font-family: var(--font-display);
+  font-family: var(--font);
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 800;
   margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
 }
 .gen-header p {
   color: var(--text-secondary);
@@ -285,8 +327,8 @@ a:hover { color: var(--gold-light); }
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--gold);
-  box-shadow: 0 0 0 2px var(--gold-bg);
+  border-color: var(--da-primary);
+  box-shadow: 0 0 0 2px var(--da-primary-bg);
 }
 .form-group input::placeholder,
 .form-group textarea::placeholder {
@@ -465,10 +507,11 @@ a:hover { color: var(--gold-light); }
   border-top: 1px solid var(--border);
 }
 .faq-section h2 {
-  font-family: var(--font-display);
+  font-family: var(--font);
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 700;
   margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
 }
 .faq-item {
   background: var(--surface);
@@ -559,18 +602,20 @@ a:hover { color: var(--gold-light); }
 }
 .footer-links a:hover { color: var(--gold); }
 .footer-brand {
-  font-family: var(--font-display);
+  font-family: var(--font);
   font-size: 1.1rem;
-  color: var(--text-secondary);
+  font-weight: 700;
+  color: var(--da-primary);
   margin-bottom: 0.5rem;
 }
 
 /* ---- Misc ---- */
 .section-title {
-  font-family: var(--font-display);
+  font-family: var(--font);
   font-size: 1.3rem;
-  font-weight: 400;
+  font-weight: 700;
   margin-bottom: 1rem;
+  letter-spacing: -0.01em;
 }
 .popular-badge {
   background: var(--gold);
@@ -590,11 +635,12 @@ a:hover { color: var(--gold-light); }
   margin-bottom: 1rem;
 }
 .counter-number {
-  font-family: var(--font-display);
+  font-family: var(--font);
   font-size: 3rem;
-  font-weight: 400;
-  color: var(--gold);
+  font-weight: 900;
+  color: var(--da-primary);
   line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 .counter-label {
   font-size: 1rem;
@@ -606,8 +652,8 @@ a:hover { color: var(--gold-light); }
 .conversion-cta {
   margin-top: 2.5rem;
   padding: 1.5rem 1.75rem;
-  background: linear-gradient(135deg, var(--gold-bg-strong), var(--gold-bg));
-  border: 1px solid rgba(240,180,41,0.25);
+  background: linear-gradient(135deg, var(--da-primary-bg-strong), var(--da-primary-bg));
+  border: 1px solid rgba(13,148,136,0.25);
   border-radius: var(--radius-lg);
   text-align: center;
 }
@@ -623,9 +669,9 @@ a:hover { color: var(--gold-light); }
   margin-bottom: 0.75rem;
 }
 .conversion-cta h3 {
-  font-family: var(--font-display);
+  font-family: var(--font);
   font-size: 1.25rem;
-  font-weight: 400;
+  font-weight: 700;
   color: var(--text);
   margin-bottom: 0.5rem;
 }

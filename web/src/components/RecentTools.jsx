@@ -16,8 +16,8 @@ function timeAgo(ts) {
 const section = {
   margin: "1.5rem 0",
   padding: "1rem 1.25rem",
-  background: "rgba(217, 119, 6, 0.05)",
-  border: "1px solid rgba(217, 119, 6, 0.15)",
+  background: "rgba(13, 148, 136, 0.05)",
+  border: "1px solid rgba(13, 148, 136, 0.15)",
   borderRadius: "12px",
 };
 
@@ -31,7 +31,7 @@ const headerRow = {
 const title = {
   fontSize: "0.8rem",
   fontWeight: 600,
-  color: "var(--gold, #d97706)",
+  color: "var(--da-primary)",
   textTransform: "uppercase",
   letterSpacing: "0.5px",
 };
@@ -68,7 +68,7 @@ const tsStyle = {
 const cta = {
   fontSize: "0.72rem",
   fontWeight: 700,
-  color: "var(--gold, #d97706)",
+  color: "var(--da-primary)",
 };
 
 export default function RecentTools() {

@@ -234,7 +234,7 @@ export default function EmployeeWarningLetterGenerator() {
               </p>
 
               {form.description && (
-                <div style={{ margin: "1rem 0", padding: "0.75rem", background: "#f9f9f9", borderLeft: "3px solid #d97706", fontSize: "0.85rem" }}>
+                <div style={{ margin: "1rem 0", padding: "0.75rem", background: "#f9f9f9", borderLeft: "3px solid #0D9488", fontSize: "0.85rem" }}>
                   <strong>Details:</strong><br />
                   {form.description}
                 </div>
