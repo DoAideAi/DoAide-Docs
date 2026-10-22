@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import SeoHead from "../../components/SeoHead";
+import ShareButtons from "../../components/ShareButtons";
 
 const Check = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34D399" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 13l4 4L19 7" /></svg>
@@ -191,6 +192,7 @@ export default function VsCanvaTemplates() {
             Start Generating Documents
             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
           </Link>
+          <ShareButtons text="DoAide Docs vs Canva for Indian documents — free, no login:" url="https://docs.doaide.com/compare/canva-templates" />
         </div>
       </section>
     </div>

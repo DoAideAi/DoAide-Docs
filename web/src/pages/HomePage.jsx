@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import SeoHead from "../components/SeoHead";
 import RecentTools from "../components/RecentTools";
 import TrendingTools from "../components/TrendingTools";
+import ShareButtons from "../components/ShareButtons";
 
 const DOCS = [
   { slug: "rent-receipt-generator", name: "Rent Receipt", icon: "🏠", category: "Rental", desc: "Generate rent receipts for HRA tax exemption. Free PDF download.", popular: true },
@@ -106,6 +107,8 @@ export default function HomePage() {
         </div>
 
         <TrendingTools />
+
+        <ShareButtons text="Free document generators for India — rent receipts, salary slips, letters & more. No login needed:" url="https://docs.doaide.com/" />
 
         <section className="explore-more" style={{ marginTop: "3rem", paddingTop: "2rem", borderTop: "1px solid var(--border, #e5e7eb)" }}>
           <h2 style={{ fontSize: "1.25rem", fontWeight: 600, marginBottom: "1rem", color: "var(--heading, #1f2937)" }}>You Might Also Need</h2>

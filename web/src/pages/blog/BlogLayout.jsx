@@ -1,5 +1,6 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
 import SeoHead from "../../components/SeoHead";
+import ShareButtons from "../../components/ShareButtons";
 
 const ARTICLES = [
   {
@@ -71,6 +72,7 @@ export default function BlogLayout() {
         </>
       )}
       <Outlet />
+      <ShareButtons text="Useful guide on Indian document formats — free templates, no login:" url={`https://docs.doaide.com${pathname.replace(/\/$/, "")}`} />
     </div>
   );
 }
