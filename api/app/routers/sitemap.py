@@ -34,6 +34,11 @@ BLOG_POSTS = [
     "rent-receipt-generator-tax-savings",
     "salary-slip-format-2026",
     "experience-letter-format-guide",
+    "offer-letter-format-india",
+    "resignation-letter-format-india",
+    "leave-application-for-office",
+    "free-rent-receipt-generator-online",
+    "online-rental-agreement-maker-india",
 ]
 
 @router.get("/sitemap.xml")
