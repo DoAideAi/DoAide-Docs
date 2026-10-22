@@ -109,11 +109,6 @@ const styles = {
     background: "rgba(255,255,255,0.08)",
     color: "rgba(255,255,255,0.7)",
   },
-  proof: {
-    marginTop: "0.5rem",
-    fontSize: "0.7rem",
-    color: "rgba(255,255,255,0.3)",
-  },
 };
 
 export default function ReferralBanner() {
@@ -138,13 +133,6 @@ export default function ReferralBanner() {
     () => `${SITE_URL}${pathname}?ref=share`,
     [pathname]
   );
-
-  const userCount = useMemo(() => {
-    const d = new Date();
-    const seed =
-      d.getFullYear() * 10000 + (d.getMonth() + 1) * 100 + d.getDate();
-    return (12000 + ((seed * 7) % 8000)).toLocaleString("en-IN");
-  }, []);
 
   const handleDismiss = () => {
     setVisible(false);
@@ -232,9 +220,6 @@ export default function ReferralBanner() {
               {X_SVG} X
             </a>
           </div>
-          <p style={styles.proof}>
-            {userCount}+ professionals use DoAide tools every day
-          </p>
         </div>
       </div>
     </>

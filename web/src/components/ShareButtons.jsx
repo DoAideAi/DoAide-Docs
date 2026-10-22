@@ -1,6 +1,6 @@
-import { useState, useMemo } from "react";
+import { useState } from "react";
 
-export default function ShareButtons({ text, url, toolName = "this tool" }) {
+export default function ShareButtons({ text, url }) {
   const [copied, setCopied] = useState(false);
   const pageUrl = url || (typeof window !== "undefined" ? window.location.href : "https://docs.doaide.com");
 
@@ -24,12 +24,6 @@ export default function ShareButtons({ text, url, toolName = "this tool" }) {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const count = useMemo(() => {
-    const d = new Date();
-    const seed = d.getFullYear() * 10000 + (d.getMonth() + 1) * 100 + d.getDate();
-    const hash = toolName.split("").reduce((a, c) => a + c.charCodeAt(0), 0);
-    return 1200 + ((seed * hash) % 3800);
-  }, [toolName]);
 
   return (
     <div className="share-section no-print">
@@ -50,7 +44,6 @@ export default function ShareButtons({ text, url, toolName = "this tool" }) {
         </button>
       </div>
       <div className="share-proof">
-        <span>{count.toLocaleString("en-IN")} people used {toolName} today</span>
         <span>Free forever &bull; No login required &bull; Made in India &#127470;&#127475;</span>
       </div>
     </div>
