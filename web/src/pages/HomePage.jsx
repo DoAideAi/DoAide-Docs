@@ -1,53 +1,8 @@
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import SeoHead from "../components/SeoHead";
 import RecentTools from "../components/RecentTools";
 import TrendingTools from "../components/TrendingTools";
-
-function AnimatedCounter() {
-  const [count, setCount] = useState(0);
-  const [started, setStarted] = useState(false);
-  const ref = useRef(null);
-  const target = 50000;
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting && !started) {
-        setStarted(true);
-        obs.disconnect();
-      }
-    }, { threshold: 0.3 });
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, [started]);
-
-  useEffect(() => {
-    if (!started) return;
-    const duration = 2000;
-    const steps = 60;
-    const inc = target / steps;
-    let current = 0;
-    const interval = setInterval(() => {
-      current += inc;
-      if (current >= target) {
-        setCount(target);
-        clearInterval(interval);
-      } else {
-        setCount(Math.floor(current));
-      }
-    }, duration / steps);
-    return () => clearInterval(interval);
-  }, [started]);
-
-  return (
-    <div ref={ref} className="counter-section">
-      <div className="counter-number">{count.toLocaleString("en-IN")}+</div>
-      <div className="counter-label">Documents Generated</div>
-    </div>
-  );
-}
 
 const DOCS = [
   { slug: "rent-receipt-generator", name: "Rent Receipt", icon: "🏠", category: "Rental", desc: "Generate rent receipts for HRA tax exemption. Free PDF download.", popular: true },
@@ -98,8 +53,6 @@ export default function HomePage() {
             Download as PDF instantly. All processing happens in your browser — your data never leaves your device.
           </p>
         </div>
-
-        <AnimatedCounter />
 
         {/* Quick Start */}
         <section className="quick-start-section" style={{ marginBottom: "2rem" }}>

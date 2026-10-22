@@ -4,7 +4,6 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import InstallPrompt from "./components/InstallPrompt";
 import ToolTracker from "./components/ToolTracker";
-import SocialProofBar from "./components/SocialProofBar";
 import ReferralBanner from "./components/ReferralBanner";
 import FeedbackWidget from "./components/FeedbackWidget";
 import BlogLayout, { BlogIndex } from "./pages/blog/BlogLayout";
@@ -64,7 +63,6 @@ export default function App() {
       <Header />
       <ToolTracker />
       <Suspense fallback={<Loading />}>
-        <SocialProofBar />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/rent-receipt-generator" element={<RentReceiptGenerator />} />

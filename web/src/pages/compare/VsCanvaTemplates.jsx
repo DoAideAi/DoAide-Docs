@@ -1,5 +1,5 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import SeoHead from "../../components/SeoHead";
 
 const Check = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34D399" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 13l4 4L19 7" /></svg>
@@ -29,12 +29,13 @@ const ROWS = [
 const icon = (t) => t === "check" ? <Check /> : t === "cross" ? <Cross /> : <Partial />;
 
 export default function VsCanvaTemplates() {
-  useEffect(() => {
-    document.title = "DoAide Docs vs Canva Templates 2026: Which Is Better for Indian Documents?";
-  }, []);
-
   return (
     <div>
+      <SeoHead
+        title="DoAide Docs vs Canva Templates 2026: Which Is Better for Indian Documents?"
+        description="An honest comparison of DoAide Docs and Canva templates for Indian legal and business documents: price, login, India-specific formats, PDF download and privacy."
+        slug="compare/canva-templates"
+      />
       {/* Hero */}
       <section style={{ background: "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)", color: "#E5E7EB", padding: "4rem 1rem" }}>
         <div style={{ maxWidth: "800px", margin: "0 auto", textAlign: "center" }}>

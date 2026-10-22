@@ -21,6 +21,9 @@ DOCUMENTS = [
     {"slug": "affidavit-generator", "priority": "0.7", "changefreq": "monthly"},
     {"slug": "partnership-deed-generator", "priority": "0.7", "changefreq": "monthly"},
     {"slug": "salary-certificate-generator", "priority": "0.8", "changefreq": "monthly"},
+    {"slug": "employee-warning-letter-generator", "priority": "0.7", "changefreq": "monthly"},
+    {"slug": "internship-certificate-generator", "priority": "0.7", "changefreq": "monthly"},
+    {"slug": "compare/canva-templates", "priority": "0.6", "changefreq": "monthly"},
 ]
 
 BLOG_POSTS = [
@@ -37,7 +40,7 @@ BLOG_POSTS = [
 def sitemap():
     base = "https://docs.doaide.com"
     urls = [f"""  <url>
-    <loc>{base}</loc>
+    <loc>{base}/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>"""]

@@ -1,5 +1,7 @@
 import xml.etree.ElementTree as ET
 
+from app.routers.sitemap import BLOG_POSTS, DOCUMENTS
+
 
 def test_sitemap_returns_xml(client):
     r = client.get("/sitemap.xml")
@@ -12,7 +14,8 @@ def test_sitemap_valid_xml(client):
     root = ET.fromstring(r.text)
     ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}
     urls = root.findall("s:url", ns)
-    assert len(urls) == 15
+    # homepage + documents + blog index + blog posts
+    assert len(urls) == 2 + len(DOCUMENTS) + len(BLOG_POSTS)
 
 
 def test_sitemap_contains_homepage(client):
