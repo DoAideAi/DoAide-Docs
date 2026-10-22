@@ -19,6 +19,10 @@ const EXPECTED_ROUTES = [
   "/salary-certificate-generator",
   "/affidavit-generator",
   "/partnership-deed-generator",
+  "/character-certificate-generator",
+  "/increment-letter-generator",
+  "/promotion-letter-generator",
+  "/address-proof-letter-generator",
   "/blog",
   "/blog/rent-receipt-generator-tax-savings",
   "/blog/salary-slip-format-2026",
@@ -44,11 +48,15 @@ const SITEMAP_SLUGS = [
   "authorization-letter-generator",
   "affidavit-generator",
   "partnership-deed-generator",
+  "character-certificate-generator",
+  "increment-letter-generator",
+  "promotion-letter-generator",
+  "address-proof-letter-generator",
 ];
 
 describe("Route coverage", () => {
   it("has expected number of routes", () => {
-    expect(EXPECTED_ROUTES.length).toBe(23);
+    expect(EXPECTED_ROUTES.length).toBe(27);
   });
 
   it("every sitemap slug has a matching route", () => {

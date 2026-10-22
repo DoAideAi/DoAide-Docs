@@ -23,6 +23,10 @@ DOCUMENTS = [
     {"slug": "salary-certificate-generator", "priority": "0.8", "changefreq": "monthly"},
     {"slug": "employee-warning-letter-generator", "priority": "0.7", "changefreq": "monthly"},
     {"slug": "internship-certificate-generator", "priority": "0.7", "changefreq": "monthly"},
+    {"slug": "character-certificate-generator", "priority": "0.7", "changefreq": "monthly"},
+    {"slug": "increment-letter-generator", "priority": "0.7", "changefreq": "monthly"},
+    {"slug": "promotion-letter-generator", "priority": "0.7", "changefreq": "monthly"},
+    {"slug": "address-proof-letter-generator", "priority": "0.7", "changefreq": "monthly"},
     {"slug": "compare/canva-templates", "priority": "0.6", "changefreq": "monthly"},
 ]
 
@@ -39,6 +43,7 @@ BLOG_POSTS = [
     "leave-application-for-office",
     "free-rent-receipt-generator-online",
     "online-rental-agreement-maker-india",
+    "online-noc-generator-india",
 ]
 
 @router.get("/sitemap.xml")

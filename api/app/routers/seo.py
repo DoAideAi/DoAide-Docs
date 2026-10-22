@@ -21,5 +21,14 @@ def list_documents():
             {"slug": "leave-application-generator", "name": "Leave Application", "category": "HR", "keywords": "leave application format, leave letter format"},
             {"slug": "resignation-letter-generator", "name": "Resignation Letter", "category": "HR", "keywords": "resignation letter format, resignation letter sample"},
             {"slug": "authorization-letter-generator", "name": "Authorization Letter", "category": "Legal", "keywords": "authorization letter format, authority letter format"},
+            {"slug": "salary-certificate-generator", "name": "Salary Certificate", "category": "HR", "keywords": "salary certificate format, salary certificate for loan"},
+            {"slug": "affidavit-generator", "name": "Affidavit", "category": "Legal", "keywords": "affidavit format, affidavit for name change, address affidavit"},
+            {"slug": "partnership-deed-generator", "name": "Partnership Deed", "category": "Business", "keywords": "partnership deed format, partnership agreement India"},
+            {"slug": "employee-warning-letter-generator", "name": "Warning Letter", "category": "HR", "keywords": "employee warning letter format, warning letter for misconduct"},
+            {"slug": "internship-certificate-generator", "name": "Internship Certificate", "category": "HR", "keywords": "internship certificate format, internship completion certificate"},
+            {"slug": "character-certificate-generator", "name": "Character Certificate", "category": "Legal", "keywords": "character certificate format, character certificate for government job"},
+            {"slug": "increment-letter-generator", "name": "Increment Letter", "category": "HR", "keywords": "increment letter format, salary increment letter sample"},
+            {"slug": "promotion-letter-generator", "name": "Promotion Letter", "category": "HR", "keywords": "promotion letter format, employee promotion letter sample"},
+            {"slug": "address-proof-letter-generator", "name": "Address Proof Letter", "category": "Legal", "keywords": "address proof letter format, address proof letter from employer"},
         ]
     }

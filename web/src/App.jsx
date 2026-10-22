@@ -29,6 +29,10 @@ const AffidavitGenerator = lazy(() => import("./pages/AffidavitGenerator"));
 const PartnershipDeedGenerator = lazy(() => import("./pages/PartnershipDeedGenerator"));
 const EmployeeWarningLetterGenerator = lazy(() => import("./pages/EmployeeWarningLetterGenerator"));
 const InternshipCertificateGenerator = lazy(() => import("./pages/InternshipCertificateGenerator"));
+const CharacterCertificateGenerator = lazy(() => import("./pages/CharacterCertificateGenerator"));
+const IncrementLetterGenerator = lazy(() => import("./pages/IncrementLetterGenerator"));
+const PromotionLetterGenerator = lazy(() => import("./pages/PromotionLetterGenerator"));
+const AddressProofLetterGenerator = lazy(() => import("./pages/AddressProofLetterGenerator"));
 const EmbedRentReceiptGenerator = lazy(() => import("./pages/EmbedRentReceiptGenerator"));
 const FreeLegalDocTemplatesIndia = lazy(() => import("./pages/blog/FreeLegalDocTemplatesIndia"));
 const HowToWriteRentAgreement = lazy(() => import("./pages/blog/HowToWriteRentAgreement"));
@@ -87,6 +91,10 @@ export default function App() {
           <Route path="/partnership-deed-generator" element={<PartnershipDeedGenerator />} />
           <Route path="/employee-warning-letter-generator" element={<EmployeeWarningLetterGenerator />} />
           <Route path="/internship-certificate-generator" element={<InternshipCertificateGenerator />} />
+          <Route path="/character-certificate-generator" element={<CharacterCertificateGenerator />} />
+          <Route path="/increment-letter-generator" element={<IncrementLetterGenerator />} />
+          <Route path="/promotion-letter-generator" element={<PromotionLetterGenerator />} />
+          <Route path="/address-proof-letter-generator" element={<AddressProofLetterGenerator />} />
           <Route path="/blog" element={<BlogLayout />}>
             <Route index element={<BlogIndex />} />
             <Route path="free-legal-document-templates-india" element={<FreeLegalDocTemplatesIndia />} />

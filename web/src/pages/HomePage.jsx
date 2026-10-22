@@ -4,6 +4,7 @@ import SeoHead from "../components/SeoHead";
 import RecentTools from "../components/RecentTools";
 import TrendingTools from "../components/TrendingTools";
 import ShareButtons from "../components/ShareButtons";
+import DocThumbnail from "../components/DocThumbnail";
 
 const DOCS = [
   { slug: "rent-receipt-generator", name: "Rent Receipt", icon: "🏠", category: "Rental", desc: "Generate rent receipts for HRA tax exemption. Free PDF download.", popular: true },
@@ -25,6 +26,10 @@ const DOCS = [
   { slug: "partnership-deed-generator", name: "Partnership Deed", icon: "🤝", category: "Business", desc: "Create partnership deeds with capital, profit sharing, and terms." },
   { slug: "employee-warning-letter-generator", name: "Warning Letter", icon: "⚠️", category: "HR", desc: "Generate employee warning letters for misconduct, performance, or attendance." },
   { slug: "internship-certificate-generator", name: "Internship Certificate", icon: "🎓", category: "HR", desc: "Create internship completion certificates with project details and rating." },
+  { slug: "character-certificate-generator", name: "Character Certificate", icon: "🛡️", category: "Legal", desc: "Generate character certificates for jobs, admissions, and verification." },
+  { slug: "increment-letter-generator", name: "Increment Letter", icon: "📈", category: "HR", desc: "Create salary increment letters with auto-calculated hike percentage." },
+  { slug: "promotion-letter-generator", name: "Promotion Letter", icon: "🏅", category: "HR", desc: "Generate promotion letters with new designation and revised salary." },
+  { slug: "address-proof-letter-generator", name: "Address Proof Letter", icon: "📍", category: "Legal", desc: "Create address proof letters from employer, landlord, or society for KYC." },
 ];
 
 const CATEGORIES = ["All", "HR", "Rental", "Business", "Legal"];
@@ -62,7 +67,7 @@ export default function HomePage() {
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem" }}>
             {[
-              { step: "1", title: "Choose Your Document", desc: "Pick from 19 document types — rent receipts, salary slips, invoices, and more." },
+              { step: "1", title: "Choose Your Document", desc: "Pick from 23 document types — rent receipts, salary slips, invoices, and more." },
               { step: "2", title: "Fill In the Details", desc: "Enter your information in a simple form. See a live preview as you type." },
               { step: "3", title: "Download PDF Instantly", desc: "Click download and get a professional PDF. No signup, no watermarks." },
             ].map((s) => (
@@ -92,9 +97,12 @@ export default function HomePage() {
         <div className="doc-grid">
           {filtered.map((doc) => (
             <Link key={doc.slug} to={`/${doc.slug}`} className="doc-card">
-              <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                <span className="doc-card-icon">{doc.icon}</span>
-                {doc.popular && <span className="popular-badge">Popular</span>}
+              <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "0.5rem" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                  <span className="doc-card-icon">{doc.icon}</span>
+                  {doc.popular && <span className="popular-badge">Popular</span>}
+                </div>
+                <DocThumbnail slug={doc.slug} />
               </div>
               <h3>{doc.name} Generator</h3>
               <p>{doc.desc}</p>

@@ -101,6 +101,26 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://docs.doaide.com/character-certificate-generator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://docs.doaide.com/increment-letter-generator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://docs.doaide.com/promotion-letter-generator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://docs.doaide.com/address-proof-letter-generator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://docs.doaide.com/compare/canva-templates</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -167,6 +187,11 @@
   </url>
   <url>
     <loc>https://docs.doaide.com/blog/online-rental-agreement-maker-india</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://docs.doaide.com/blog/online-noc-generator-india</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -3,7 +3,7 @@ def test_documents_endpoint(client):
     assert r.status_code == 200
     data = r.json()
     docs = data["documents"]
-    assert len(docs) == 14
+    assert len(docs) == 23
 
 
 def test_documents_have_required_fields(client):
