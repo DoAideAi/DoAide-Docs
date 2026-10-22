@@ -7,6 +7,8 @@
 // Also writes:
 //   dist/app-shell.html — the SPA with no canonical and noindex, served for any
 //     URL that isn't prerendered (index.html is now the prerendered homepage).
+//   dist/404.html       — the same shell, which serve sends (with status 404) for
+//     anything that isn't a file, a prerendered route or one of APP_ROUTES.
 //   dist/serve.json     — routing for `serve dist` (run WITHOUT -s: -s rewrites
 //     every extensionless path to index.html before directory indexes are looked at).
 //
@@ -19,6 +21,8 @@ import { build } from "vite";
 
 const SITE_URL = "https://docs.doaide.com";
 const ENTRY = "src/prerenderEntry.jsx";
+// Client-side routes that aren't in the sitemap; they get the noindex shell with a 200.
+const APP_ROUTES = ["/embed/:tool"];
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const DIST = join(ROOT, "dist");
@@ -124,6 +128,7 @@ shellDoc.head.querySelectorAll('link[rel="canonical"], meta[property="og:url"]')
 stripTemplateSchemas(shellDoc);
 upsert(shellDoc, 'meta[name="robots"]', "meta", { name: "robots" }).setAttribute("content", "noindex, follow");
 await writeFile(join(DIST, "app-shell.html"), shell.serialize());
+await writeFile(join(DIST, "404.html"), shell.serialize());
 
 const { renderRoute } = await import(pathToFileURL(join(SSR_OUT, "prerenderEntry.js")).href);
 const { document } = window;
@@ -168,13 +173,15 @@ for (const route of routes) {
 for (const [title, paths] of titles) if (paths.length > 1) console.warn(`warning: duplicate title "${title}": ${paths.join(", ")}`);
 
 // serve applies rewrites to every extensionless path before it looks at the
-// filesystem, so each prerendered route is listed explicitly ahead of the fallback.
+// filesystem, so each prerendered route is listed explicitly. There is no "**"
+// catch-all: serve re-applies the remaining rules to each rewritten path, so a
+// catch-all would also swallow /<route>/index.html. Unknown paths get 404.html.
 await writeFile(join(DIST, "serve.json"), JSON.stringify({
   cleanUrls: false,
   rewrites: [
     { source: "/", destination: "/index.html" },
     ...routes.filter((r) => r !== "/").map((r) => ({ source: r, destination: `${r}/index.html` })),
-    { source: "**", destination: "/app-shell.html" },
+    ...APP_ROUTES.map((r) => ({ source: r, destination: "/app-shell.html" })),
   ],
 }, null, 2) + "\n");
 
