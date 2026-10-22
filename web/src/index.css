@@ -777,3 +777,35 @@ a:hover { color: var(--gold-light); }
   }
 }
 body { overflow-x: clip; }
+
+/* ---- First-visit onboarding guide ---- */
+.onboarding {
+  position: fixed;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 9999;
+  max-width: 26rem;
+  margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg, 12px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  padding: 1rem 1.25rem 1.25rem;
+}
+.onboarding-head { display: flex; align-items: center; justify-content: space-between; }
+.onboarding-count { font-size: 0.75rem; color: var(--text-muted); font-weight: 600; }
+.onboarding-close {
+  min-width: 48px;
+  min-height: 48px;
+  margin-right: -0.75rem;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+.onboarding h2 { font-family: var(--font); font-size: 1.1rem; font-weight: 700; margin-bottom: 0.35rem; }
+.onboarding p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5; }
+.onboarding-actions { display: flex; gap: 0.5rem; justify-content: flex-end; margin-top: 1rem; flex-wrap: wrap; }
+@media print { .onboarding { display: none; } }

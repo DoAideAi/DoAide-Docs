@@ -6,6 +6,7 @@ import InstallPrompt from "./components/InstallPrompt";
 import ToolTracker from "./components/ToolTracker";
 import ReferralBanner from "./components/ReferralBanner";
 import FeedbackWidget from "./components/FeedbackWidget";
+import OnboardingGuide from "./components/OnboardingGuide";
 import BlogLayout, { BlogIndex } from "./pages/blog/BlogLayout";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
@@ -62,6 +63,7 @@ export default function App() {
     <>
       <Header />
       <ToolTracker />
+      <OnboardingGuide />
       <Suspense fallback={<Loading />}>
         <Routes>
           <Route path="/" element={<HomePage />} />
