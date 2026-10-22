@@ -809,3 +809,17 @@ body { overflow-x: clip; }
 .onboarding p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5; }
 .onboarding-actions { display: flex; gap: 0.5rem; justify-content: flex-end; margin-top: 1rem; flex-wrap: wrap; }
 @media print { .onboarding { display: none; } }
+
+/* Markdown blog posts (src/pages/blog/posts/*.md) */
+.md-post { font-size: 15px; line-height: 1.8; color: var(--text-secondary); }
+.md-post > * + * { margin-top: 16px; }
+.md-post h2 { font-family: var(--font-display); font-size: 24px; margin-top: 40px; color: var(--text); }
+.md-post h3 { font-size: 18px; font-weight: 600; margin-top: 28px; color: var(--text); }
+.md-post a { color: var(--gold); font-weight: 500; }
+.md-post strong { color: var(--text); }
+.md-post ul, .md-post ol { padding-left: 20px; }
+.md-post blockquote { margin: 0; padding: 16px 20px; background: var(--gold-bg); border: 1px solid rgba(13,148,136,0.2); border-radius: var(--radius-lg); font-size: 14px; }
+.md-post pre { padding: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); white-space: pre-wrap; font-size: 13px; line-height: 1.7; }
+.md-post table { width: 100%; border-collapse: collapse; font-size: 14px; display: block; overflow-x: auto; }
+.md-post th, .md-post td { border: 1px solid var(--border); padding: 8px 12px; text-align: left; vertical-align: top; }
+.md-post th { background: var(--surface); color: var(--text); }

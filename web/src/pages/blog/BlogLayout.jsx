@@ -1,6 +1,7 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
 import SeoHead from "../../components/SeoHead";
 import ShareButtons from "../../components/ShareButtons";
+import { MARKDOWN_POSTS } from "./markdownPosts";
 
 const ARTICLES = [
   {
@@ -80,7 +81,7 @@ export default function BlogLayout() {
 export function BlogIndex() {
   return (
     <div>
-      {ARTICLES.map((a) => (
+      {[...MARKDOWN_POSTS, ...ARTICLES].map((a) => (
         <Link key={a.slug} to={`/blog/${a.slug}`} style={s.card}>
           <div style={s.cardTitle}>{a.title}</div>
           <div style={s.cardDesc}>{a.description}</div>

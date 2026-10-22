@@ -37,6 +37,7 @@ const InternshipCertificateGuide = lazy(() => import("./pages/blog/InternshipCer
 const RentReceiptTaxSavingsGuide = lazy(() => import("./pages/blog/RentReceiptTaxSavingsGuide"));
 const SalarySlipFormat2026 = lazy(() => import("./pages/blog/SalarySlipFormat2026"));
 const ExperienceLetterFormatGuide = lazy(() => import("./pages/blog/ExperienceLetterFormatGuide"));
+const MarkdownPost = lazy(() => import("./pages/blog/MarkdownPost"));
 const VsCanvaTemplates = lazy(() => import("./pages/compare/VsCanvaTemplates"));
 
 function Loading() {
@@ -95,6 +96,7 @@ export default function App() {
             <Route path="rent-receipt-generator-tax-savings" element={<RentReceiptTaxSavingsGuide />} />
             <Route path="salary-slip-format-2026" element={<SalarySlipFormat2026 />} />
             <Route path="experience-letter-format-guide" element={<ExperienceLetterFormatGuide />} />
+            <Route path=":slug" element={<MarkdownPost />} />
           </Route>
           <Route path="/compare/canva-templates" element={<VsCanvaTemplates />} />
           <Route path="*" element={<Navigate to="/" replace />} />
