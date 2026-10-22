@@ -88,6 +88,7 @@ a:hover { color: var(--gold-light); }
 .brand {
   display: flex;
   align-items: center;
+  min-height: 48px;
   gap: 0.5rem;
   text-decoration: none;
 }
@@ -122,7 +123,7 @@ a:hover { color: var(--gold-light); }
   color: var(--text-secondary);
   font-size: 0.9rem;
   font-weight: 500;
-  min-height: 44px;
+  min-height: 48px;
   display: inline-flex;
   align-items: center;
   padding: 0.4rem 0.5rem;
@@ -186,7 +187,7 @@ a:hover { color: var(--gold-light); }
   border: 1px solid var(--border);
   color: var(--text-secondary);
   padding: 0.5rem 1rem;
-  min-height: 44px;
+  min-height: 48px;
   border-radius: 20px;
   cursor: pointer;
   font: inherit;
@@ -273,8 +274,8 @@ a:hover { color: var(--gold-light); }
   .hero h1 { font-size: 1.75rem; }
   .hero p { font-size: 0.95rem; }
   .page-container { padding: 1.25rem 1rem 3rem; }
-  .site-header { padding: 0.5rem 1rem; }
-  .header-nav { gap: 0.25rem; }
+  .site-header { padding: 0.25rem 1rem; flex-wrap: wrap; gap: 0 0.5rem; }
+  .header-nav { gap: 0.25rem; flex-wrap: wrap; }
   .header-nav a { font-size: 0.82rem; padding: 0.4rem 0.35rem; }
   .doc-grid { grid-template-columns: 1fr; }
   .doc-card { padding: 1rem; }
@@ -314,7 +315,7 @@ a:hover { color: var(--gold-light); }
 .form-group textarea {
   width: 100%;
   padding: 0.6rem 0.8rem;
-  min-height: 44px;
+  min-height: 48px;
   background: var(--bg-alt);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
@@ -430,7 +431,7 @@ a:hover { color: var(--gold-light); }
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-  min-height: 44px;
+  min-height: 48px;
   padding: 0.6rem 1.2rem;
   border-radius: var(--radius-sm);
   font: inherit;
@@ -527,7 +528,7 @@ a:hover { color: var(--gold-light); }
   border: none;
   color: var(--text);
   padding: 1rem 1.25rem;
-  min-height: 44px;
+  min-height: 48px;
   font: inherit;
   font-weight: 600;
   cursor: pointer;
@@ -595,7 +596,7 @@ a:hover { color: var(--gold-light); }
 .footer-links a {
   color: var(--text-secondary);
   font-size: 0.85rem;
-  min-height: 44px;
+  min-height: 48px;
   display: inline-flex;
   align-items: center;
   padding: 0.3rem 0.25rem;
@@ -686,7 +687,7 @@ a:hover { color: var(--gold-light); }
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  min-height: 44px;
+  min-height: 48px;
   padding: 0.6rem 1.5rem;
   background: var(--gold);
   color: var(--text-on-gold);
@@ -713,7 +714,7 @@ a:hover { color: var(--gold-light); }
 }
 .noc-type-tab {
   padding: 0.5rem 1rem;
-  min-height: 44px;
+  min-height: 48px;
   background: var(--bg-alt);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
@@ -746,7 +747,7 @@ a:hover { color: var(--gold-light); }
 .mode-toggle button {
   flex: 1;
   padding: 0.5rem 1rem;
-  min-height: 44px;
+  min-height: 48px;
   background: var(--bg-alt);
   border: none;
   color: var(--text-secondary);
@@ -763,3 +764,16 @@ a:hover { color: var(--gold-light); }
   background: var(--gold);
   color: var(--text-on-gold);
 }
+
+/* ---- Touch targets: every tappable control is at least 48x48px on touch/small screens ---- */
+@media (pointer: coarse), (max-width: 768px) {
+  button,
+  .btn,
+  .share-row a,
+  .footer-links a,
+  .header-nav a {
+    min-height: 48px;
+    min-width: 48px;
+  }
+}
+body { overflow-x: clip; }

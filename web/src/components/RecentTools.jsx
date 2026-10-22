@@ -48,6 +48,7 @@ const chip = {
   alignItems: "center",
   gap: "0.4rem",
   padding: "0.5rem 1rem",
+  minHeight: "48px",
   background: "var(--surface, #fff)",
   border: "1px solid var(--border, #e5e7eb)",
   borderRadius: "20px",
