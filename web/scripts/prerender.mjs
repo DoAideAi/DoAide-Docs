@@ -120,6 +120,7 @@ for (const key of ["window", "document", "navigator", "localStorage", "sessionSt
   Object.defineProperty(globalThis, key, { value: window[key], configurable: true, writable: true });
 }
 globalThis.fetch = stubFetch;
+window.Element.prototype.scrollIntoView = noop;
 
 // Fallback for URLs that aren't prerendered: the plain SPA shell, kept out of the index.
 const shell = new JSDOM(template);
