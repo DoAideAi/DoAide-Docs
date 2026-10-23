@@ -33,6 +33,7 @@ const CharacterCertificateGenerator = lazy(() => import("./pages/CharacterCertif
 const IncrementLetterGenerator = lazy(() => import("./pages/IncrementLetterGenerator"));
 const PromotionLetterGenerator = lazy(() => import("./pages/PromotionLetterGenerator"));
 const AddressProofLetterGenerator = lazy(() => import("./pages/AddressProofLetterGenerator"));
+const RecommendationLetterGenerator = lazy(() => import("./pages/RecommendationLetterGenerator"));
 const EmbedRentReceiptGenerator = lazy(() => import("./pages/EmbedRentReceiptGenerator"));
 const FreeLegalDocTemplatesIndia = lazy(() => import("./pages/blog/FreeLegalDocTemplatesIndia"));
 const HowToWriteRentAgreement = lazy(() => import("./pages/blog/HowToWriteRentAgreement"));
@@ -95,6 +96,7 @@ export default function App() {
           <Route path="/increment-letter-generator" element={<IncrementLetterGenerator />} />
           <Route path="/promotion-letter-generator" element={<PromotionLetterGenerator />} />
           <Route path="/address-proof-letter-generator" element={<AddressProofLetterGenerator />} />
+          <Route path="/recommendation-letter-generator" element={<RecommendationLetterGenerator />} />
           <Route path="/blog" element={<BlogLayout />}>
             <Route index element={<BlogIndex />} />
             <Route path="free-legal-document-templates-india" element={<FreeLegalDocTemplatesIndia />} />

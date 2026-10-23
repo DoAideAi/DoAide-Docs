@@ -30,6 +30,7 @@ const DOCS = [
   { slug: "increment-letter-generator", name: "Increment Letter", icon: "📈", category: "HR", desc: "Create salary increment letters with auto-calculated hike percentage." },
   { slug: "promotion-letter-generator", name: "Promotion Letter", icon: "🏅", category: "HR", desc: "Generate promotion letters with new designation and revised salary." },
   { slug: "address-proof-letter-generator", name: "Address Proof Letter", icon: "📍", category: "Legal", desc: "Create address proof letters from employer, landlord, or society for KYC." },
+  { slug: "recommendation-letter-generator", name: "Recommendation Letter", icon: "⭐", category: "HR", desc: "Generate recommendation letters for employment, academic, or personal references." },
 ];
 
 const CATEGORIES = ["All", "HR", "Rental", "Business", "Legal"];

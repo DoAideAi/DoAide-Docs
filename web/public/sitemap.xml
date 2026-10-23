@@ -121,6 +121,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://docs.doaide.com/recommendation-letter-generator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://docs.doaide.com/compare/canva-templates</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -192,6 +197,11 @@
   </url>
   <url>
     <loc>https://docs.doaide.com/blog/online-noc-generator-india</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://docs.doaide.com/blog/hr-document-templates-india</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
