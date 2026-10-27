@@ -76,12 +76,12 @@ export function dismissReferralBanner() {
 export const TRENDING_TOOLS = [
   { name: 'GST Calculator', url: 'https://gst.doaide.com/calculator', product: 'GSTBot', icon: '🧮' },
   { name: 'Income Tax Calculator', url: 'https://tax.doaide.com/income-tax-calculator', product: 'TaxFile', icon: '💰' },
-  { name: 'Premium Calculator', url: 'https://insurekit.doaide.com/premium-calculator', product: 'InsureKit', icon: '₹' },
+  { name: 'Premium Calculator', url: 'https://insure.doaide.com/premium-calculator', product: 'InsureKit', icon: '₹' },
   { name: 'Resume Builder', url: 'https://resume.doaide.com', product: 'Resume', icon: '📝' },
   { name: 'SIP Calculator', url: 'https://tax.doaide.com/sip-calculator', product: 'TaxFile', icon: '📈' },
   { name: 'GSTIN Lookup', url: 'https://gst.doaide.com/lookup', product: 'GSTBot', icon: '🔍' },
   { name: 'EMI Calculator', url: 'https://tax.doaide.com/emi-calculator', product: 'TaxFile', icon: '🏠' },
   { name: 'Cover Letter', url: 'https://resume.doaide.com/cover-letter-generator', product: 'Resume', icon: '✉️' },
-  { name: 'Plan Comparison', url: 'https://insurekit.doaide.com/compare-plans', product: 'InsureKit', icon: '⚖️' },
+  { name: 'Plan Comparison', url: 'https://insure.doaide.com/compare-plans', product: 'InsureKit', icon: '⚖️' },
   { name: 'ATS Checker', url: 'https://resume.doaide.com/ats-checker', product: 'Resume', icon: '✅' },
 ];

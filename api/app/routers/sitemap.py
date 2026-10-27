@@ -27,6 +27,7 @@ DOCUMENTS = [
     {"slug": "increment-letter-generator", "priority": "0.7", "changefreq": "monthly"},
     {"slug": "promotion-letter-generator", "priority": "0.7", "changefreq": "monthly"},
     {"slug": "address-proof-letter-generator", "priority": "0.7", "changefreq": "monthly"},
+    {"slug": "recommendation-letter-generator", "priority": "0.7", "changefreq": "monthly"},
     {"slug": "compare/canva-templates", "priority": "0.6", "changefreq": "monthly"},
 ]
 
@@ -44,6 +45,7 @@ BLOG_POSTS = [
     "free-rent-receipt-generator-online",
     "online-rental-agreement-maker-india",
     "online-noc-generator-india",
+    "hr-document-templates-india",
 ]
 
 @router.get("/sitemap.xml")

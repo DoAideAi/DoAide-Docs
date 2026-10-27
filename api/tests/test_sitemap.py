@@ -50,3 +50,15 @@ def test_robots_txt(client):
     assert "text/plain" in r.headers["content-type"]
     assert "Sitemap: https://docs.doaide.com/sitemap.xml" in r.text
     assert "Allow: /" in r.text
+
+
+def test_sitemap_matches_web_prerender_list(client):
+    # web/public/sitemap.xml decides which pages get prerendered; the API serves
+    # /sitemap.xml. A page added to one and not the other is either unlisted or
+    # listed without its own HTML.
+    from pathlib import Path
+
+    web = Path(__file__).resolve().parents[2] / "web" / "public" / "sitemap.xml"
+    ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+    locs = lambda xml: {el.text for el in ET.fromstring(xml).findall("s:url/s:loc", ns)}
+    assert locs(client.get("/sitemap.xml").text) == locs(web.read_text())

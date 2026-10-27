@@ -140,7 +140,7 @@ export default function HomePage() {
               <p>Draft NDAs, service agreements, and employment contracts with AI.</p>
               <span className="doc-card-tag">Legal</span>
             </a>
-            <a href="https://409a.doaide.com" className="doc-card" target="_blank" rel="noopener noreferrer">
+            <a href="https://409.doaide.com" className="doc-card" target="_blank" rel="noopener noreferrer">
               <span className="doc-card-icon" style={{ fontSize: "1.5rem" }}>📊</span>
               <h3>409A Valuations</h3>
               <p>Independent, defensible startup valuations with AI-assisted intake.</p>
